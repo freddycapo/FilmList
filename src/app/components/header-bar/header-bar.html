@@ -1,0 +1,24 @@
+<header class="film-header">
+  <div class="header-content">
+    <h1 class="app-title">FILM APP</h1>
+    
+    <div class="header-actions">
+      <button 
+        type="button" 
+        class="btn btn-delete"
+        (click)="onDeleteSelected()"
+        title="Elimina film selezionati">
+        <span class="delete-icon">🗑️</span>
+      </button>
+      
+      <button 
+        type="button" 
+        class="btn btn-add"
+        (click)="onAddNew()"
+        title="Aggiungi nuovo film"
+        [routerLink]="['/add']">
+        <span class="add-icon">+</span>
+      </button>
+    </div>
+  </div>
+</header>

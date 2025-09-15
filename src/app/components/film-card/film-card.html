@@ -1,0 +1,21 @@
+<div class="horizontal-card card-blue">
+    <div class="card-checkbox">
+        <input type="checkbox" id="card1" name="card1">
+    </div>
+    <div class="card-image">
+        <img [src]="filmcard().image" alt="copertina">
+    </div>
+    <div class="card-content">
+        <h3 class="card-title"> {{ filmcard().title }}</h3>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px;">
+            <p class="card-description" style="margin-bottom: 0; flex: 1;">
+               {{ filmcard().description}}
+            </p>
+            <div class = "colonna">
+                <span class="contenuto">{{ filmcard()?.date | date:'mediumDate'}}</span>
+                <app-rating-bar class="contenuto"></app-rating-bar>
+            </div>
+        </div>
+        <span class="yellow-box">Ciao</span>
+    </div>
+</div>

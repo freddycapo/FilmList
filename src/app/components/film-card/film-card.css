@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.horizontal-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.horizontal-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.card-checkbox {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.card-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.card-image {
+    flex: 0 0 120px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #e5e7eb;
+}
+
+.card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+ .card-blue {
+    border-left: 4px solid #2563eb;
+}
+
+ .yellow-box {
+    display: inline-block;
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 12px;
+    
+    font-weight: 500;
+     
+    background-color: #fde047;
+    border-color: #facc15;
+    color: #713f12;
+}
+
+.colonna {
+  display: flex;
+  flex-direction: column; /* disposizione verticale */
+  gap: 0ng px;              /* spazio tra i due blocchi */
+  align-items: stretch;   /* allunga i figli per tutta la larghezza */
+}
+
+.contenuto {
+  padding: 16px;
+  /*border: 1px solid #ccc;
+  border-radius: 8px;*/
+}

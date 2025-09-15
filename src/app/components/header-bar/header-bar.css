@@ -1,0 +1,92 @@
+.film-header {
+  background-color: #232222;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.film-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.film-header .app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffecec;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.film-header .header-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.film-header .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.film-header .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.film-header .btn:active {
+  transform: translateY(0);
+}
+
+.film-header .btn-delete {
+  background-color: #ff4444;
+  color: white;
+}
+
+.film-header .btn-delete:hover {
+  background-color: #cc3333;
+}
+
+.film-header .btn-delete .delete-icon {
+  font-size: 1rem;
+}
+
+.film-header .btn-add {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.film-header .btn-add:hover {
+  background-color: #45a049;
+}
+
+.film-header .btn-add .add-icon {
+  line-height: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .film-header {
+    padding: 0.75rem 1rem;
+  }
+  .film-header .app-title {
+    font-size: 1.25rem;
+  }
+  .film-header .btn {
+    width: 36px;
+    height: 36px;
+  }
+}

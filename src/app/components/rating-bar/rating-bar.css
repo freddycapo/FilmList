@@ -1,0 +1,26 @@
+/* star-row.component.css (o .scss) */
+
+.star-row {
+  display: flex;
+  align-items: center;      /* centra verticalmente se i componenti hanno altezze diverse */
+  justify-content: center;  /* centra orizzontalmente il gruppo */
+  gap: 12px;                /* spazio tra le stelle; cambia come preferisci */
+  flex-wrap: nowrap;        /* mantieni su una riga; cambia in wrap per mobile */
+  padding: 8px;
+  user-select: none;
+}
+
+/* Responsive: se lo schermo è piccolo, riduci gap o permetti wrapping */
+@media (max-width: 420px) {
+  .star-row {
+    gap: 8px;
+    flex-wrap: wrap;       /* consentire va a capo su schermi molto stretti */
+    justify-content: center;
+  }
+}
+
+/* Se vuoi un container più compatto (es. per forms) */
+.star-row--compact {
+  gap: 6px;
+  padding: 4px 0;
+}
