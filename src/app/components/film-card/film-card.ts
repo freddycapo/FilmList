@@ -2,11 +2,13 @@
 import { Component, input} from '@angular/core';
 import { RatingBar } from "../rating-bar/rating-bar";
 import { DatePipe } from '@angular/common';
+
 export interface FilmCard {
   title:string;
   description:string;
   date:Date;
   image:string;
+  rating?: number; 
 }
 
 @Component({

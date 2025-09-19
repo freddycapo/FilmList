@@ -16,7 +16,6 @@ export class HeaderBar {
   }
 
   onAddNew(): void {
-
     this.addNew.emit('Add Mode');
   }
 }

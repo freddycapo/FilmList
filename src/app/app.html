@@ -5,16 +5,6 @@
       (addNew)="onAddNew($event)">
     </app-header-bar>
     
-    <main class="dashboard-content">
-      <!-- Qui andranno la barra di ricerca e la lista dei film -->
-      <p>Contenuto principale dell'app...</p>
-      
-      @for (card of cards(); track $index) {
-        <app-film-card [filmcard]="card"></app-film-card>
-      }
-
-      <h1>{{ message() }}</h1>
-
-    </main>
+    <router-outlet></router-outlet>
   </div>
-<router-outlet></router-outlet>
+

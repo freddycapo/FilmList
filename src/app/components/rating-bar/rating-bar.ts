@@ -13,10 +13,12 @@ export class RatingBar {
   public stars: number[] = Array.from({ length: this.maxRating }, (_ , i) => i+1);
   
   public rating = signal<number>(0);
+  public newRating = output<number>();
 
   updateRating(newRating: number): void {
     this.rating.set(newRating);
-    console.log("Updated rating to:", this.rating());
+    //console.log("Updated rating to:", this.rating());
+    this.newRating.emit(this.rating());
   }
   
 }
