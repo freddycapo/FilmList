@@ -1,25 +1,28 @@
-
 <div class="page-container">
     <div class="form-container">
             <h2 class="form-title">Create New Film</h2>
             
-            <!-- This is your Angular form structure with added styling -->
             <form [formGroup]="myForm" class="entry-form"  (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" id="title" name="title" placeholder="Enter a title..." formControlName="title" />
+                    <input type="text" id="title" name="title" placeholder="Enter a title..." formControlName="title" required />
                 </div>
     
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <input type="text" id="description" name="description" placeholder="Describe your entry..." formControlName="description"/>
+                    <input type="text" id="description" name="description" placeholder="Describe your entry..." formControlName="description" required/>
                 </div>
-    
+
+                <div class="form-group">
+                    <label for="genere">Genere</label>
+                    <input type="text" id="title" name="genere" formControlName="genere" />
+                </div>
+
                 <div class="form-group">
                     <label for="date">Date</label>
                     <input type="date" id="date" name="date" formControlName="date" />
                 </div>
-    
+
                 <div class="form-group">
                     <label for="image">Image</label>
                     <input type="file" id="image" name="image" accept="image/*" formControlName="image"/>
@@ -27,11 +30,22 @@
     
                 <div class="form-group">
                     <label for="rating">Rating</label>
-                    <!--input type="number" id="rating" name="rating" formControlName="rating"/-->
-                    <app-rating-bar (newRating)="onRatingChange($event)"></app-rating-bar>
+                   <input 
+                    type="range"
+                    min="0"
+                    max="5"
+                    step="1"
+                    id="rating" 
+                    name="rating" 
+                    formControlName="rating"
+                    style="width: 100%;"
+                    oninput="document.getElementById('ratingValue').textContent = this.value" />
+                    <span id="ratingValue">0</span>
                 </div>
     
-                <button type="submit" class="submit-btn">Invia</button>
+                <button type="submit" class="submit-btn" formControlName="rating" [disabled]="this.myForm.invalid">Invia</button>
+                <button type="button" class="submit-btn" (click)="router.navigate(['/'])">Annulla</button>
+                <button type="button" class="submit-btn" (click)="myForm.reset()">Reset</button>
             </form>
     </div>
 

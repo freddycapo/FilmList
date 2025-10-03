@@ -4,11 +4,13 @@ import { RatingBar } from "../rating-bar/rating-bar";
 import { DatePipe } from '@angular/common';
 
 export interface FilmCard {
+  id: number;
   title:string;
   description:string;
   date:Date;
   image:string;
-  rating?: number; 
+  genere:string;
+  rating: number; 
 }
 
 @Component({

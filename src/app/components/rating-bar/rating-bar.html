@@ -1,11 +1,10 @@
 <div class="star-row" role="group" aria-label="Valutazione">
   
-    @for (star_num of stars; track star_num) {
-      <app-star 
-        [id]="star_num" 
-        [checked]="star_num <= rating()" 
-        (click)="updateRating(star_num)">
-      </app-star>
+  @for (star_num of stars; track star_num) {
+    <app-star 
+      [id]="star_num" 
+      [checked]="star_num <= rating()" 
+      >
+    </app-star>
   }
-
 </div>

@@ -1,0 +1,11 @@
+<ul>
+  @if (films().length === 0) {
+    <p>No films available.</p>
+  } @else{
+    @for (film of films(); track $index) {
+      <li>
+        <app-film-card [filmcard]="film"></app-film-card>
+      </li>
+    }
+  }
+</ul>

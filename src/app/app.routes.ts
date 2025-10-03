@@ -11,5 +11,6 @@ export const routes: Routes = [
     {
         path: '',
         component: Home
-    }
+    },
+    // add/:id capire se modificare, visualizzazione, aggiunta
 ];

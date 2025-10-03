@@ -1,10 +1,4 @@
 <main class="dashboard-content">
       <!-- Qui andranno la barra di ricerca e la lista dei film -->
-      <p>Contenuto principale dell'app...</p>
-      
-      @for (card of cards(); track $index) {
-        <app-film-card [filmcard]="card"></app-film-card>
-      }
-
-      <h1>{{ message() }}</h1>    
+      <app-film-list-component></app-film-list-component>   
 </main>

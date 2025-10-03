@@ -12,10 +12,10 @@
                {{ filmcard().description}}
             </p>
             <div class = "colonna">
-                <span class="contenuto">{{ filmcard()?.date | date:'mediumDate'}}</span>
-                <app-rating-bar class="contenuto"></app-rating-bar>
+                <span class="contenuto">{{ filmcard().date | date:'mediumDate'}}</span>
+                <app-rating-bar class="contenuto" [rating]="filmcard().rating"></app-rating-bar>
             </div>
         </div>
-        <span class="yellow-box">Ciao</span>
+        <span class="yellow-box">{{ filmcard().genere }}</span>
     </div>
 </div>
