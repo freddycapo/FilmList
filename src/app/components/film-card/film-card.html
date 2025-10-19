@@ -16,6 +16,7 @@
                 <app-rating-bar class="contenuto" [rating]="filmcard().rating"></app-rating-bar>
             </div>
         </div>
-        <span class="yellow-box">{{ filmcard().genere }}</span>
+        <span class="yellow-box">{{ filmcard().genere }} {{filmcard().id}}</span>
+        <button class="edit-button" [routerLink]="['edit/', filmcard().id ]">View</button>
     </div>
 </div>

@@ -2,6 +2,8 @@
 import { Component, input} from '@angular/core';
 import { RatingBar } from "../rating-bar/rating-bar";
 import { DatePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
 
 export interface FilmCard {
   id: number;
@@ -15,7 +17,7 @@ export interface FilmCard {
 
 @Component({
   selector: 'app-film-card',
-  imports: [RatingBar , DatePipe],
+  imports: [RatingBar, DatePipe, RouterLink],
   templateUrl: './film-card.html',
   styleUrl: './film-card.css'
 })

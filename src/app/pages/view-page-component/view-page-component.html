@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>{{this.filmToView()?.title}}</h1>
+  <div class="card-header">
+    <span class="genre-badge">Genere</span>
+  </div>
+  <div class="card-grid">
+      <p class="description">Descrizione</p>
+      
+      <div class="card-footer">
+        <span class="date">Data</span>
+        <div class="rating">
+          <span class="stars">
+            <app-rating-bar [rating]="3"></app-rating-bar>
+          </span>
+          <span class="rating-text">3</span>
+        </div>
+    </div>
+  </div>
+</div>
+

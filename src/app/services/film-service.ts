@@ -1,4 +1,4 @@
-import { Injectable , signal} from '@angular/core';
+import { Injectable , Signal, signal} from '@angular/core';
 import { FilmCard } from '../components/film-card/film-card';
 
 @Injectable({
@@ -16,6 +16,14 @@ export class FilmService {
     film.id = this.nextId();
     this.nextId.set(this.nextId() + 1);
     this.films.update(films => [...films, film]);
+  }
+
+  getFilmById(id: number) : FilmCard | undefined {
+    return this.films().find(film => film.id === id);
+  }
+
+  updateFilm(updatedFilm: FilmCard) : void {
+    this.films.update(films => films.map(film => film.id === updatedFilm.id ? updatedFilm : film));
   }
 
 }
